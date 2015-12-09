@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="button_font_size">30sp</dimen>
+    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">New Teaching Pad</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="clr">CLR</string>
+    <string name="decrease_motor">遅く</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="ent">ENT</string>
+    <string name="hoge">hogehoge</string>
+    <string name="increase_motor">速く</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="m1">安静</string>
+    <string name="m10">手首回内</string>
+    <string name="m11">手首回外</string>
+    <string name="m2">握り</string>
+    <string name="m3">開き</string>
+    <string name="m4">4指屈曲</string>
+    <string name="m5">4指伸展</string>
+    <string name="m6">母指屈曲</string>
+    <string name="m7">母指伸展</string>
+    <string name="m8">掌並立</string>
+    <string name="m9">掌対立</string>
+    <string name="none">-</string>
+    <string name="none_found">No devices found</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="s1">s1</string>
+    <string name="s2">s2</string>
+    <string name="s3">s3</string>
+    <string name="scanning">scanning for devices..</string>
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="send">Send</string>
+    <string name="title_connected_to">connected to <ns1:g id="device_name">%1$s</ns1:g></string>
+    <string name="title_connecting">connecting..</string>
+    <string name="title_not_connected">not connected</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="title_paired_devices">Paired Devices</string>
+</resources>

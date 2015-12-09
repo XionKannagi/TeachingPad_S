@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:16:1-39:12
+	xmlns:android
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:16:11-69
+	package
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:17:7-50
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:19:7-32
+	android:versionCode
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:18:7-30
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:20:5-73
+	android:targetSdkVersion
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:20:15-44
+	android:minSdkVersion
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:20:45-71
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:21:5-74
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:21:22-71
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:22:22-65
+application
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:24:5-38:19
+	android:label
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:24:18-50
+	android:debuggable
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:25:52-78
+	android:icon
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:25:18-51
+activity#com.example.android.BluetoothChat.BluetoothChat
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:26:9-33:20
+	android:label
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:27:19-51
+	android:configChanges
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:28:19-69
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:26:19-48
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:29:13-32:29
+action#android.intent.action.MAIN
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:31:27-74
+activity#com.example.android.BluetoothChat.DeviceListActivity
+ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:34:9-37:72
+	android:label
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:35:19-56
+	android:configChanges
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:37:19-69
+	android:theme
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:36:19-67
+	android:name
+		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad_S/AndroidManifest.xml:34:19-53
