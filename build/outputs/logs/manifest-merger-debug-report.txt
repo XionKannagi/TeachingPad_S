@@ -7,6 +7,8 @@ ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:1
 		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
 	android:versionName
 		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:19:7-32
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
 	android:versionCode
 		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:18:7-30
 		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
@@ -17,8 +19,12 @@ uses-sdk
 ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:20:5-73
 	android:targetSdkVersion
 		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:20:15-44
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
 	android:minSdkVersion
 		ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:20:45-71
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
+		INJECTED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml
 uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from /Users/togane/AndroidStudioProjects/TeachingPad/AndroidManifest.xml:21:5-74
 	android:name
