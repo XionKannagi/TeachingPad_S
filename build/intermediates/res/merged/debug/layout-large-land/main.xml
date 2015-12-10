@@ -17,12 +17,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     android:orientation="vertical"
     android:paddingEnd="0dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="0dp">
+    android:paddingTop="0dp"
+    android:background="#000000">
 
     <ScrollView
         android:id="@+id/scrollview"
@@ -53,8 +53,8 @@
 
                     <Button
                         android:id="@+id/button_m5"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/good_hand2" />
 
                     <TextView
@@ -72,8 +72,8 @@
 
                     <Button
                         android:id="@+id/button_m6"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/four_finger_open" />
 
                     <TextView
@@ -95,8 +95,8 @@
 
                     <Button
                         android:id="@+id/button_m7"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/four_finger_hand2" />
 
@@ -117,8 +117,8 @@
 
                     <Button
                         android:id="@+id/button_m8"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/oyayubi_open" />
 
@@ -144,8 +144,8 @@
 
                     <Button
                         android:id="@+id/button_m1"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/relax" />
 
                     <TextView
@@ -166,8 +166,8 @@
 
                     <Button
                         android:id="@+id/button_m2"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/close_hand" />
 
                     <TextView
@@ -187,8 +187,8 @@
 
                     <Button
                         android:id="@+id/button_m3"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/open_hand_2" />
 
                     <TextView
@@ -207,8 +207,8 @@
 
 
                     <Button
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="#000000" />
 
@@ -234,8 +234,8 @@
 
                     <Button
                         android:id="@+id/button_s1"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/speed_up" />
 
                     <TextView
@@ -255,8 +255,8 @@
 
                     <Button
                         android:id="@+id/button_s2"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/slow_down" />
 
 
@@ -277,8 +277,8 @@
 
                     <Button
                         android:id="@+id/button_clr"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/clear_button" />
 
@@ -300,8 +300,8 @@
 
                     <Button
                         android:id="@+id/button_ent"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/enter_button" />
 
@@ -506,4 +506,4 @@
             />
         </LinearLayout>
     -->
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout-land/main.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout-large-land/main.xml -->
