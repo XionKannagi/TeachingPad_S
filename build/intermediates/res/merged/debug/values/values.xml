@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/values/dimens.xml -->
+    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="button_font_size">30sp</dimen>
-    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/values/strings.xml -->
+    <!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">New Teaching Pad</string>
     <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>

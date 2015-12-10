@@ -18,10 +18,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingEnd="16dp"
+    android:paddingTop="16dp"
     android:background="#000000">
 
     <ScrollView
@@ -32,13 +32,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
             <!--上のViewに追加でEditTextによるキーボード表示が消える
-               android:focusable="true"
-               android:focusableInTouchMode="true"
-           -->
-
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+            -->
 
 
             <LinearLayout
@@ -54,9 +52,190 @@
                     android:orientation="vertical">
 
                     <Button
+                        android:id="@+id/button_m5"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/good_hand2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button_m6"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/four_finger_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m5"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/button_m7"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/four_finger_hand2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m6" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/button_m8"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/oyayubi_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m7" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button_m1"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/relax" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m1" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/button_m2"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/close_hand" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/button_m3"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/open_hand_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/m3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/none" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
                         android:id="@+id/button_s1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/speed_up" />
 
                     <TextView
@@ -75,56 +254,9 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/button_m1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/relax" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m1" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/button_m5"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/good_hand2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m4" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <Button
                         android:id="@+id/button_s2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:background="@drawable/slow_down" />
 
 
@@ -144,58 +276,9 @@
 
 
                     <Button
-                        android:id="@+id/button_m2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/close_hand" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/button_m6"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/four_finger_open" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m5"
-
-                        />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <Button
                         android:id="@+id/button_clr"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/clear_button" />
 
@@ -206,54 +289,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <Button
-                        android:id="@+id/button_m3"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/open_hand_2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m3"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <Button
-                        android:id="@+id/button_m7"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/four_finger_hand2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m6" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -265,8 +300,8 @@
 
                     <Button
                         android:id="@+id/button_ent"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_weight="1"
                         android:background="@drawable/enter_button" />
 
@@ -274,50 +309,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/ent" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <Button
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="#000000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/none" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <Button
-                        android:id="@+id/button_m8"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/oyayubi_open" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/m7" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -343,6 +334,7 @@
                     android:layout_weight="0.99"
                     android:text="@string/send" />
             </LinearLayout>
+
 
             <ListView
                 android:id="@+id/in"
