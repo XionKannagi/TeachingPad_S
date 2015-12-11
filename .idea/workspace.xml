@@ -8,11 +8,8 @@
           <device id="Nexus 5" />
           <device id="Nexus 4" />
         </devices>
-<<<<<<< Updated upstream
         <pickBest>false</pickBest>
         <target>android-22</target>
-=======
->>>>>>> Stashed changes
       </config>
     </shared>
     <layouts>
