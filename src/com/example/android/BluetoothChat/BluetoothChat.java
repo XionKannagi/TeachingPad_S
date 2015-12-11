@@ -50,6 +50,9 @@ public class BluetoothChat extends Activity {
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
 
+    //
+    int Case = 0;
+
     // Message types sent from the BluetoothChatService Handler
     public static final int MESSAGE_STATE_CHANGE = 1;
     public static final int MESSAGE_READ = 2;
@@ -112,6 +115,8 @@ public class BluetoothChat extends Activity {
 
         if (D) Log.e(TAG, "+++ ON CREATE +++");
 
+        Case = 0;
+
         // Set up the window layout
         setContentView(R.layout.main);
 
@@ -126,11 +131,23 @@ public class BluetoothChat extends Activity {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+
+        if (D) Log.e(TAG, "++ ON SaveInstanceState ++");
+
+        Case++;
+
+        super.onSaveInstanceState(outState);
+
+    }
 
     @Override
     public void onStart() {
         super.onStart();
         if (D) Log.e(TAG, "++ ON START ++");
+        Case = 0;
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
@@ -147,6 +164,7 @@ public class BluetoothChat extends Activity {
     public synchronized void onResume() {
         super.onResume();
         if (D) Log.e(TAG, "+ ON RESUME +");
+        Case = 0;
 
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
@@ -351,20 +369,32 @@ public class BluetoothChat extends Activity {
     public synchronized void onPause() {
         super.onPause();
         if (D) Log.e(TAG, "- ON PAUSE -");
+        Case++;
     }
 
     @Override
     public void onStop() {
         super.onStop();
         if (D) Log.e(TAG, "-- ON STOP --");
+        Case++;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Case++;
         // Stop the Bluetooth chat services
-        if (mChatService != null) mChatService.stop();
-        if (D) Log.e(TAG, "--- ON DESTROY ---");
+        if (mChatService != null && Case != 4 && D) {
+            mChatService.stop();
+            Log.e(TAG, "--- ON DESTROY ---"+"Chat is stopped!!");
+            Case = 0;
+        }
+        if (Case == 4 && D) {
+            Log.e(TAG, "--- ON DESTROY ---");
+            Case = 0;
+        }
+
+        //if(D) Log.e(TAG, "--- ON DESTROY ---");
     }
 
     private void ensureDiscoverable() {
