@@ -26,6 +26,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -97,11 +98,16 @@ public class BluetoothChat extends Activity {
     private BluetoothAdapter mBluetoothAdapter = null;
     // Member object for the chat services
     private BluetoothChatService mChatService = null;
+    //振動フィードバック
+    private Vibrator vibrator;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        vibrator.vibrate(1000);
 
 
         if (D) Log.e(TAG, "+++ ON CREATE +++");
@@ -185,6 +191,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = ".";
                 sendMessage(message);
+                vibrator.vibrate(100);
                 /*s1.setText("Speed Up!");
                 s1.setTextColor(Color.RED);*/
             }
@@ -195,6 +202,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = ",";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         /*
@@ -204,6 +212,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "3";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         */
@@ -213,6 +222,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "e";
                 sendMessage(message);
+                vibrator.vibrate(100);
 
             }
         });
@@ -222,6 +232,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "1";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM2Button = (Button) findViewById(R.id.button_m2);
@@ -230,6 +241,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "2";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM3Button = (Button) findViewById(R.id.button_m3);
@@ -238,6 +250,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "3";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         /*mM4Button = (Button) findViewById(R.id.button_m4);
@@ -246,6 +259,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "4";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });*/
         mM5Button = (Button) findViewById(R.id.button_m5);
@@ -254,6 +268,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "5";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM6Button = (Button) findViewById(R.id.button_m6);
@@ -262,6 +277,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "6";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM7Button = (Button) findViewById(R.id.button_m7);
@@ -270,6 +286,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "7";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM8Button = (Button) findViewById(R.id.button_m8);
@@ -278,6 +295,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "8";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         /*mM9Button = (Button) findViewById(R.id.button_m9);
@@ -286,6 +304,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "9";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM10Button = (Button) findViewById(R.id.button_m10);
@@ -294,6 +313,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "o";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
         mM11Button = (Button) findViewById(R.id.button_m11);
@@ -302,6 +322,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "p";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });*/
         mCLRButton = (Button) findViewById(R.id.button_clr);
@@ -310,6 +331,7 @@ public class BluetoothChat extends Activity {
                 // Send a message using content of the edit text widget
                 String message = "c";
                 sendMessage(message);
+                vibrator.vibrate(100);
             }
         });
 
@@ -318,6 +340,11 @@ public class BluetoothChat extends Activity {
 
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
+    }
+
+    private void button_vibration(int msec) {
+        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        vibrator.vibrate(msec);
     }
 
     @Override
@@ -437,6 +464,7 @@ public class BluetoothChat extends Activity {
                     mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to "
                             + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    vibrator.vibrate(500);
                     break;
                 case MESSAGE_TOAST:
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),

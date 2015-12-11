@@ -18,7 +18,7 @@ android {
     buildToolsVersion "23.0.2"
 defaultConfig{
     applicationId "jp.ac.uec.yokoi.Teachingpad_ver1"
-    minSdkVersion 21
+    minSdkVersion 17
     targetSdkVersion 23
     versionCode 1
     versionName "1.0"
