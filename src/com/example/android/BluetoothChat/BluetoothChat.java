@@ -90,6 +90,7 @@ public class BluetoothChat extends Activity {
     private Button mM11Button;
     private Button mCLRButton;
 
+    //private Button mM1bButton;
 
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -246,12 +247,14 @@ public class BluetoothChat extends Activity {
             }
         });
         mM1Button = (Button) findViewById(R.id.button_m1);
+        //mM1bButton = (Button) findViewById(R.id.button_m1_background);
         mM1Button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
                 String message = "1";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                //mM1bButton.setBackgroundResource(R.drawable.button_shape_pink);
             }
         });
         mM2Button = (Button) findViewById(R.id.button_m2);
@@ -351,6 +354,7 @@ public class BluetoothChat extends Activity {
                 String message = "c";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                //mM1bButton.setBackgroundResource(R.drawable.button_shape_bule);
             }
         });
 
@@ -419,6 +423,7 @@ public class BluetoothChat extends Activity {
         // Check that we're actually connected before trying anything
         if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
             Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
+            //mM1bButton.setBackgroundResource(R.drawable.button_shape_bule);
             return;
         }
 

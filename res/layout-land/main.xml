@@ -51,11 +51,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m5"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/good_hand2"/>
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m5"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/good_hand2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -71,11 +82,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m6"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/four_finger_open" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m6"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/four_finger_open" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -93,12 +115,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m7"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/four_finger_hand2" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m7"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/four_finger_hand2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -116,12 +148,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m8"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/oyayubi_open" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m8"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/oyayubi_open" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -144,11 +186,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m1"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/relax" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/relax" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -167,11 +220,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m2"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/close_hand" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/close_hand" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -189,11 +253,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m3"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/open_hand_2" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m3"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/open_hand_2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -239,11 +314,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_s1"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/speed_up" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_s1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/speed_up_test" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/button_s1_tex"
@@ -261,11 +347,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_s2"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/slow_down" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_s2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/slow_down" />
+
+                    </FrameLayout>
 
 
                     <TextView
@@ -284,12 +381,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_clr"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/clear_button" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_clr"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/clear_button" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -308,12 +415,22 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_ent"
+                    <FrameLayout
                         android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/enter_button" />
+                        android:layout_height="70dp">
+
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_ent"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/enter_button" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"

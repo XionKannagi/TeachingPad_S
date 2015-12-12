@@ -17,12 +17,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     android:orientation="vertical"
-    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingEnd="16dp"
-    android:background="#000000">
+    android:paddingTop="16dp">
 
     <ScrollView
         android:id="@+id/scrollview"
@@ -32,13 +32,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
             <!--上のViewに追加でEditTextによるキーボード表示が消える
                android:focusable="true"
                android:focusableInTouchMode="true"
            -->
-
 
 
             <LinearLayout
@@ -53,18 +51,29 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_s1"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/speed_up" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:id="@+id/button_s1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/speed_up_test" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/button_s1_tex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/increase_motor"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -75,17 +84,27 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m1"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/relax" />
+                        android:layout_height="100dp">
 
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/relax" />
+
+                    </FrameLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m1"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -96,17 +115,28 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m5"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/good_hand2" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m5"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/good_hand2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m4"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
                 </LinearLayout>
 
 
@@ -124,18 +154,29 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_s2"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/slow_down" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_s2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/slow_down" />
+
+                    </FrameLayout>
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/decrease_motor"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -147,17 +188,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m2"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/close_hand" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/close_hand" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m2"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -168,11 +220,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button_m6"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/four_finger_open" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m6"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/four_finger_open" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -196,18 +259,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_clr"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/clear_button" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_clr"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/clear_button" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/clr"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -219,17 +292,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m3"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/open_hand_2" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/open_hand_2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m3"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -241,18 +325,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m7"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/four_finger_hand2" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m7"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/four_finger_hand2" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m6"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -270,18 +364,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_ent"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/enter_button" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_ent"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/enter_button" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/ent"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -295,18 +399,17 @@
 
 
                     <Button
-                        android:id="@+id/chat_stop"
+                        style="@android:style/Widget.Material.Button.Borderless"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:background="#000000"
-                        style="@android:style/Widget.Material.Button.Borderless"/>
+                        android:background="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/none"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -318,18 +421,28 @@
                     android:orientation="vertical">
 
 
-                    <Button
-                        android:id="@+id/button_m8"
+                    <FrameLayout
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/oyayubi_open" />
+                        android:layout_height="100dp">
+
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/button_shape_bule" />
+                        <Button
+                            android:id="@+id/button_m8"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/oyayubi_open" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m7"
-                        android:textColor="#999999"/>
+                        android:textColor="#999999" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -526,4 +639,4 @@
             />
         </LinearLayout>
     -->
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout/main.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/layout/main.xml -->

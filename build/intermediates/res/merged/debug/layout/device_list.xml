@@ -72,4 +72,4 @@
         android:layout_height="wrap_content"
         android:text="@string/button_scan"
         android:textColor="#666"/>
-</LinearLayout><!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout/device_list.xml -->
+</LinearLayout><!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/layout/device_list.xml -->
