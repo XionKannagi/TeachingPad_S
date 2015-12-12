@@ -27,4 +27,4 @@
           android:title="@string/discoverable"
           android:showAsAction="ifRoom|withText" />
 </menu>
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/menu/option_menu.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/menu/option_menu.xml -->

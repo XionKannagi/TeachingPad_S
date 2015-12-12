@@ -242,6 +242,7 @@ public class BluetoothChat extends Activity {
                 sendMessage(message);
                 vibrator.vibrate(100);
 
+
             }
         });
         mM1Button = (Button) findViewById(R.id.button_m1);

@@ -55,12 +55,13 @@
                         android:id="@+id/button_m5"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:background="@drawable/good_hand2" />
+                        android:background="@drawable/good_hand2"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m4" />
+                        android:text="@string/m4"
+                        android:textColor="#999999"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -80,8 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/m5"
-
-                        />
+                        android:textColor="#999999" />
 
                 </LinearLayout>
 
@@ -103,7 +103,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m6" />
+                        android:text="@string/m6"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -125,7 +126,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m7" />
+                        android:text="@string/m7"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -151,7 +153,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m1" />
+                        android:text="@string/m1"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -173,7 +176,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m2" />
+                        android:text="@string/m2"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -194,7 +198,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m3" />
+                        android:text="@string/m3"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -210,12 +215,14 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
-                        android:background="#000000" />
+                        android:background="#000000"
+                        style="@android:style/Widget.Material.Button.Borderless"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/none" />
+                        android:text="@string/none"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -242,7 +249,8 @@
                         android:id="@+id/button_s1_tex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/increase_motor" />
+                        android:text="@string/increase_motor"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -263,7 +271,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease_motor" />
+                        android:text="@string/decrease_motor"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -285,7 +294,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/clr" />
+                        android:text="@string/clr"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -308,7 +318,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ent" />
+                        android:text="@string/ent"
+                        android:textColor="#999999"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -506,4 +517,4 @@
             />
         </LinearLayout>
     -->
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/layout-land/main.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout-land/main.xml -->

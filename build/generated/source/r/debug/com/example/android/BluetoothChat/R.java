@@ -24,10 +24,12 @@ public final class R {
         public static final int good_hand=0x7f020007;
         public static final int good_hand2=0x7f020008;
         public static final int open_hand_2=0x7f020009;
-        public static final int oyayubi_open=0x7f02000a;
-        public static final int relax=0x7f02000b;
-        public static final int slow_down=0x7f02000c;
-        public static final int speed_up=0x7f02000d;
+        public static final int orval_shape_setting=0x7f02000a;
+        public static final int oyayubi_open=0x7f02000b;
+        public static final int relax=0x7f02000c;
+        public static final int slow_down=0x7f02000d;
+        public static final int speed_up=0x7f02000e;
+        public static final int speed_up_test=0x7f02000f;
     }
     public static final class id {
         public static final int button_clr=0x7f07000f;
