@@ -201,9 +201,7 @@ public class BluetoothChat extends Activity {
                 sendMessage(message);
             }
         });
-        /*/////////////////////////////////////////////////////////////
-        final TextView s1 = (TextView)findViewById(R.id.button_s1_tex);
-        /////////////////////////////////////////////////////////////*/
+
         mS1Button = (Button) findViewById(R.id.button_s1);
         mS1Button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -211,8 +209,7 @@ public class BluetoothChat extends Activity {
                 String message = ".";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                /*s1.setText("Speed Up!");
-                s1.setTextColor(Color.RED);*/
+
             }
         });
         mS2Button = (Button) findViewById(R.id.button_s2);
@@ -247,14 +244,13 @@ public class BluetoothChat extends Activity {
             }
         });
         mM1Button = (Button) findViewById(R.id.button_m1);
-        //mM1bButton = (Button) findViewById(R.id.button_m1_background);
         mM1Button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
                 String message = "1";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                //mM1bButton.setBackgroundResource(R.drawable.button_shape_pink);
+
             }
         });
         mM2Button = (Button) findViewById(R.id.button_m2);
@@ -358,12 +354,16 @@ public class BluetoothChat extends Activity {
             }
         });
 
+
+
+
         // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(this, mHandler);
 
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
     }
+
 
     private void button_vibration(int msec) {
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);

@@ -192,6 +192,7 @@
 
 
                         <Button
+                            android:id="@+id/button_m1_background"
                             android:layout_width="140dp"
                             android:layout_height="140dp"
                             android:background="@drawable/button_shape_bule" />
