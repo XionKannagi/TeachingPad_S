@@ -56,7 +56,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m5_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -87,7 +88,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m6_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -120,7 +122,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m7_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -153,7 +156,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m8_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -191,7 +195,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m1_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -225,7 +230,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m2_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -258,7 +264,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_m3_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -319,7 +326,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_s1_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -352,7 +360,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_s2_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -386,7 +395,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_clr_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -420,7 +430,8 @@
                         android:layout_height="70dp">
 
 
-                        <Button
+                        <TextView
+                            android:id="@+id/button_ent_background"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/button_shape_bule" />
@@ -634,4 +645,4 @@
             />
         </LinearLayout>
     -->
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/layout-land/main.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/layout-land/main.xml -->

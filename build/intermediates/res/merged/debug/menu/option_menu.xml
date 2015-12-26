@@ -16,7 +16,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/secure_connect_scan"
           android:icon="@android:drawable/ic_menu_search"
-          android:title="@string/secure_connect"
+          android:title="@string/select_device"
           android:showAsAction="ifRoom|withText" />
     <item android:id="@+id/insecure_connect_scan"
           android:icon="@android:drawable/ic_menu_search"
@@ -27,4 +27,4 @@
           android:title="@string/discoverable"
           android:showAsAction="ifRoom|withText" />
 </menu>
-<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad/res/menu/option_menu.xml -->
+<!-- From: file:/Users/togane/AndroidStudioProjects/TeachingPad_S/res/menu/option_menu.xml -->

@@ -22,7 +22,6 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -42,6 +41,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import static com.example.android.BluetoothChat.R.drawable.button_shape_pink;
+
 /**
  * This is the main Activity that displays the current chat session.
  */
@@ -49,6 +55,7 @@ public class BluetoothChat extends Activity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
+    public String SAVED_ENTITY;
 
     //
     int Case = 0;
@@ -90,7 +97,23 @@ public class BluetoothChat extends Activity {
     private Button mM11Button;
     private Button mCLRButton;
 
-    //private Button mM1bButton;
+    //ボタンの背景部のTextView
+    private TextView m1Background;
+    private TextView m2Background;
+    private TextView m3Background;
+    private TextView m5Background;
+    private TextView m6Background;
+    private TextView m7Background;
+    private TextView m8Background;
+    private TextView s1Background;
+    private TextView s2Background;
+    private TextView clrBackground;
+    private TextView entBackground;
+
+    //ボタンを押した瞬間のボタンを取得
+    private TextView pushedButton = null;
+    //ボタンを押した後に受信した文字数を保存
+    private int pushedNumber = 0;
 
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -113,13 +136,25 @@ public class BluetoothChat extends Activity {
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         vibrator.vibrate(1000);
 
-
         if (D) Log.e(TAG, "+++ ON CREATE +++");
-
-        Case = 0;
 
         // Set up the window layout
         setContentView(R.layout.main);
+
+        //create時のデフォルトカラーはグレイ
+        m1Background = (TextView) findViewById(R.id.button_m1_background);
+        m2Background = (TextView) findViewById(R.id.button_m2_background);
+        m3Background = (TextView) findViewById(R.id.button_m3_background);
+        m5Background = (TextView) findViewById(R.id.button_m5_background);
+        m6Background = (TextView) findViewById(R.id.button_m6_background);
+        m7Background = (TextView) findViewById(R.id.button_m7_background);
+        m8Background = (TextView) findViewById(R.id.button_m8_background);
+        s1Background = (TextView) findViewById(R.id.button_s1_background);
+        s2Background = (TextView) findViewById(R.id.button_s2_background);
+        entBackground = (TextView) findViewById(R.id.button_ent_background);
+        clrBackground = (TextView) findViewById(R.id.button_clr_background);
+        default_color();
+
 
         // Get local Bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -138,9 +173,48 @@ public class BluetoothChat extends Activity {
 
         if (D) Log.e(TAG, "++ ON SaveInstanceState ++");
 
-        //Case++;
 
         super.onSaveInstanceState(outState);
+
+        byte[] buf = null;
+        try {
+            ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+            ObjectOutputStream objectOut = new ObjectOutputStream(byteOut);
+            objectOut.writeObject(mChatService);
+            buf = byteOut.toByteArray();
+
+        } catch (Exception e) {
+            // 何もしない
+        }
+
+        // byte配列で格納
+        outState.putByteArray(SAVED_ENTITY, buf);
+
+
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d("Lifecycle", "+++onRestoreInstanceState()+++");
+
+        // 保存値がある場合、エンティティを復帰
+        if (savedInstanceState != null) {
+            byte[] buf = savedInstanceState.getByteArray(SAVED_ENTITY);
+            if (buf != null && buf.length > 0) {
+                try {
+
+                    ByteArrayInputStream byteInput = new ByteArrayInputStream(buf);
+                    ObjectInputStream objectInput = new ObjectInputStream(byteInput);
+                    mChatService = (BluetoothChatService) objectInput.readObject();
+                    mChatService.start();
+
+                } catch (Exception e) {
+                    // 何もしない
+                }
+            }
+        }
 
     }
 
@@ -148,7 +222,7 @@ public class BluetoothChat extends Activity {
     public void onStart() {
         super.onStart();
         if (D) Log.e(TAG, "++ ON START ++");
-        //Case = 0;
+
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
@@ -250,6 +324,9 @@ public class BluetoothChat extends Activity {
                 String message = "1";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                pushedNumber = 0;
+                pushedButton = m1Background;
+                //m1Background.setBackgroundResource(R.drawable.button_shape_bule);
 
             }
         });
@@ -260,6 +337,9 @@ public class BluetoothChat extends Activity {
                 String message = "2";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                pushedNumber = 0;
+                pushedButton = m2Background;
+                //m2Background.setBackgroundResource(R.drawable.button_shape_bule);
             }
         });
         mM3Button = (Button) findViewById(R.id.button_m3);
@@ -269,6 +349,9 @@ public class BluetoothChat extends Activity {
                 String message = "3";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                m3Background.setBackgroundResource(R.drawable.button_shape_bule);
+                pushedNumber = 0;
+                pushedButton = m3Background;
             }
         });
         /*mM4Button = (Button) findViewById(R.id.button_m4);
@@ -287,6 +370,9 @@ public class BluetoothChat extends Activity {
                 String message = "5";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                m5Background.setBackgroundResource(R.drawable.button_shape_bule);
+                pushedNumber = 0;
+                pushedButton = m5Background;
             }
         });
         mM6Button = (Button) findViewById(R.id.button_m6);
@@ -296,6 +382,10 @@ public class BluetoothChat extends Activity {
                 String message = "6";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                m6Background.setBackgroundResource(R.drawable.button_shape_bule);
+
+                pushedNumber = 0;
+                pushedButton = m6Background;
             }
         });
         mM7Button = (Button) findViewById(R.id.button_m7);
@@ -305,6 +395,9 @@ public class BluetoothChat extends Activity {
                 String message = "7";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                m7Background.setBackgroundResource(R.drawable.button_shape_bule);
+                pushedNumber = 0;
+                pushedButton = m7Background;
             }
         });
         mM8Button = (Button) findViewById(R.id.button_m8);
@@ -314,6 +407,9 @@ public class BluetoothChat extends Activity {
                 String message = "8";
                 sendMessage(message);
                 vibrator.vibrate(100);
+                m8Background.setBackgroundResource(R.drawable.button_shape_bule);
+                pushedNumber = 0;
+                pushedButton = m8Background;
             }
         });
         /*mM9Button = (Button) findViewById(R.id.button_m9);
@@ -350,11 +446,9 @@ public class BluetoothChat extends Activity {
                 String message = "c";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                //mM1bButton.setBackgroundResource(R.drawable.button_shape_bule);
+                possible_color();
             }
         });
-
-
 
 
         // Initialize the BluetoothChatService to perform bluetooth connections
@@ -374,34 +468,22 @@ public class BluetoothChat extends Activity {
     public synchronized void onPause() {
         super.onPause();
         if (D) Log.e(TAG, "- ON PAUSE -");
-        //Case++;
     }
 
     @Override
     public void onStop() {
         super.onStop();
         if (D) Log.e(TAG, "-- ON STOP --");
-        //Case++;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        //Case++;
-        // Stop the Bluetooth chat services
-        /*if (mChatService != null && Case != 4 && D) {
-            mChatService.stop();
-            Log.e(TAG, "--- ON DESTROY ---"+"Chat is stopped!!");
-            Case = 0;
-        }
-        if (Case == 4 && D) {
-            Log.e(TAG, "--- ON DESTROY ---");
-            Case = 0;
-        }*/
+
 
         if (mChatService != null) mChatService.stop();
 
-        if(D) Log.e(TAG, "--- ON DESTROY ---"+Case);
+        if (D) Log.e(TAG, "--- ON DESTROY ---");
     }
 
     private void ensureDiscoverable() {
@@ -472,6 +554,11 @@ public class BluetoothChat extends Activity {
                     if (D) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
                     switch (msg.arg1) {
                         case BluetoothChatService.STATE_CONNECTED:
+                            //接続が確認されたらボタンを有効にする
+                            button_state_all_true();
+                            //ボタンは教示可能色pinkに切り替わる
+                            possible_color();
+
                             setStatus(getString(R.string.title_connected_to, mConnectedDeviceName));
                             mConversationArrayAdapter.clear();
                             break;
@@ -480,6 +567,10 @@ public class BluetoothChat extends Activity {
                             break;
                         case BluetoothChatService.STATE_LISTEN:
                         case BluetoothChatService.STATE_NONE:
+
+                            //接続するまではボタンは無効
+                            button_state_all_false();
+
                             setStatus(R.string.title_not_connected);
                             break;
                     }
@@ -495,6 +586,14 @@ public class BluetoothChat extends Activity {
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+
+                    //TODO 押したボタンに応じてボタンの色を変更する
+                    pushedNumber++;
+                    if (pushedButton != null && pushedNumber == 10) {
+                        pushedButton.setBackgroundResource(R.drawable.button_shape_bule);
+                        pushedButton = null;
+                    }
+
                     break;
                 case MESSAGE_DEVICE_NAME:
                     // save the connected device's name
@@ -577,6 +676,69 @@ public class BluetoothChat extends Activity {
                 return true;
         }
         return false;
+    }
+
+    //全ボタンのデフォルトカラーをセット
+    private void default_color() {
+
+        m1Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m2Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m3Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m5Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m6Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m7Background.setBackgroundResource(R.drawable.button_shape_gray);
+        m8Background.setBackgroundResource(R.drawable.button_shape_gray);
+        s1Background.setBackgroundResource(R.drawable.button_shape_gray);
+        s2Background.setBackgroundResource(R.drawable.button_shape_gray);
+        entBackground.setBackgroundResource(R.drawable.button_shape_gray);
+        clrBackground.setBackgroundResource(R.drawable.button_shape_gray);
+
+    }
+
+    private void possible_color() {
+
+        m1Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m2Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m3Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m5Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m6Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m7Background.setBackgroundResource(R.drawable.button_shape_pink);
+        m8Background.setBackgroundResource(R.drawable.button_shape_pink);
+        entBackground.setBackgroundResource(R.drawable.button_shape_green);
+        clrBackground.setBackgroundResource(R.drawable.button_shape_green);
+        s1Background.setBackgroundResource(R.drawable.button_shape_green);
+        s2Background.setBackgroundResource(R.drawable.button_shape_green);
+
+    }
+
+    private void button_state_all_false() {
+        mM1Button.setEnabled(false);
+        mM2Button.setEnabled(false);
+        mM3Button.setEnabled(false);
+        mM5Button.setEnabled(false);
+        mM6Button.setEnabled(false);
+        mM7Button.setEnabled(false);
+        mM8Button.setEnabled(false);
+        mS1Button.setEnabled(false);
+        mS2Button.setEnabled(false);
+        mENTButton.setEnabled(false);
+        mCLRButton.setEnabled(false);
+
+    }
+
+    private void button_state_all_true() {
+        mM1Button.setEnabled(true);
+        mM2Button.setEnabled(true);
+        mM3Button.setEnabled(true);
+        mM5Button.setEnabled(true);
+        mM6Button.setEnabled(true);
+        mM7Button.setEnabled(true);
+        mM8Button.setEnabled(true);
+        mS1Button.setEnabled(true);
+        mS2Button.setEnabled(true);
+        mENTButton.setEnabled(true);
+        mCLRButton.setEnabled(true);
+
     }
 
 }
