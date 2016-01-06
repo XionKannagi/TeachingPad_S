@@ -127,6 +127,8 @@ public class BluetoothChat extends Activity {
     private BluetoothChatService mChatService = null;
     //振動フィードバック
     private Vibrator vibrator;
+    //clr状態の保持
+    private boolean clr_state = false;
 
 
     @Override
@@ -313,7 +315,8 @@ public class BluetoothChat extends Activity {
                 String message = "e";
                 sendMessage(message);
                 vibrator.vibrate(100);
-
+                pushedButton=null;
+                clr_state = false;
 
             }
         });
@@ -349,7 +352,6 @@ public class BluetoothChat extends Activity {
                 String message = "3";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                m3Background.setBackgroundResource(R.drawable.button_shape_bule);
                 pushedNumber = 0;
                 pushedButton = m3Background;
             }
@@ -370,7 +372,6 @@ public class BluetoothChat extends Activity {
                 String message = "5";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                m5Background.setBackgroundResource(R.drawable.button_shape_bule);
                 pushedNumber = 0;
                 pushedButton = m5Background;
             }
@@ -382,8 +383,6 @@ public class BluetoothChat extends Activity {
                 String message = "6";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                m6Background.setBackgroundResource(R.drawable.button_shape_bule);
-
                 pushedNumber = 0;
                 pushedButton = m6Background;
             }
@@ -395,7 +394,6 @@ public class BluetoothChat extends Activity {
                 String message = "7";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                m7Background.setBackgroundResource(R.drawable.button_shape_bule);
                 pushedNumber = 0;
                 pushedButton = m7Background;
             }
@@ -407,7 +405,6 @@ public class BluetoothChat extends Activity {
                 String message = "8";
                 sendMessage(message);
                 vibrator.vibrate(100);
-                m8Background.setBackgroundResource(R.drawable.button_shape_bule);
                 pushedNumber = 0;
                 pushedButton = m8Background;
             }
@@ -447,6 +444,8 @@ public class BluetoothChat extends Activity {
                 sendMessage(message);
                 vibrator.vibrate(100);
                 possible_color();
+
+                clr_state = true;
             }
         });
 
@@ -588,10 +587,12 @@ public class BluetoothChat extends Activity {
                     mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
 
                     //TODO 押したボタンに応じてボタンの色を変更する
-                    pushedNumber++;
-                    if (pushedButton != null && pushedNumber == 10) {
-                        pushedButton.setBackgroundResource(R.drawable.button_shape_bule);
-                        pushedButton = null;
+                    if (clr_state == false) {
+                        pushedNumber++;
+                        if (pushedButton != null && pushedNumber == 10) {
+                            pushedButton.setBackgroundResource(R.drawable.button_shape_bule);
+                            pushedButton = null;
+                        }
                     }
 
                     break;
